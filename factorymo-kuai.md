@@ -14,8 +14,9 @@ main\_reactor
 main_reactor在swServer_start_proxy中定义
 
 swServer_start->swServer_start_proxy->swServer_master_onAccept
-
 ```
+
+main\_reactor 进行select 循环监听，接受到连接后触发 listen事件
 
 
 
