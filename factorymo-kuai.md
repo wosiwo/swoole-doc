@@ -20,3 +20,11 @@ main\_reactor 进行select 循环监听，接受到连接后触发 listen事件
 
 
 
+连接调用流程 
+
+```
+epoll_wait -> accept -> getHandle(read_event)-> swReactorThread_onRead(读取数据)->抛给worker进程 
+```
+
+
+
