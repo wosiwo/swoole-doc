@@ -8,3 +8,13 @@
 
 Reactor线程接收到数据后，抛给manager进程的Factory模块\(待确认\),Factory会根据一定的分配规则，为该请求分配一个worker进程，并在worker进程执行结束后，将结果返回客户端
 
+
+
+```c
+    #define SW_SHM_MMAP_FILE_LEN  
+```
+
+
+
+
+
