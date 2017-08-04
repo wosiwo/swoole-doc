@@ -23,7 +23,8 @@ main\_reactor 进行select 循环监听，接受到连接后触发 listen事件
 ```
 epoll_wait -> accept -> getHandle(read_event)-> swReactorThread_onRead(读取数据)->swPort_onRead_check_length[port->onRead]
 ->swProtocol_recv_check_length->swReactorThread_dispatch->[factory->swFactoryProcess_dispatch]->
-swReactorThread_send2worker->[从main_reactor抛给reactor线程处理]swWorker_onPipeReceive->swWorker_onTask->[serv->onReceive,调用回调执行php代码]  抛给worker进程
+swReactorThread_send2worker->[从main_reactor抛给reactor线程处理]swWorker_onPipeReceive->swWorker_onTask->[serv->onReceive,]  抛给worker进程
+-->php_swoole_onReceive ->调用回调执行php代码
 ```
 
 
