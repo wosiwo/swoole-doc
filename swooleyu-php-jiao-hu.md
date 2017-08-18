@@ -10,5 +10,5 @@ PHP\_METHOD\(swoole\_server, send\)
 
 send流程
 
-swoole\_server.send-&gt;swServer\_tcp\_send-\[&gt;factory-&gt;finish\]-&gt;
+swoole\_server.send-&gt;swServer\_tcp\_send-\[&gt;factory-&gt;finish\]-&gt;swFactoryProcess\_finish
 
