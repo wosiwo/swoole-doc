@@ -10,9 +10,11 @@ php代码中接收到fd,与请求数据\(仍然处于worker进程中\)，按照�
 
 send方法实现在扩展的php\_method中，最终将返回数据写入与reactor线程监听的管道中
 
-
-
 //TODO worker进程写入的是否是开始那个reactor的管道
 
 reactor线程，监听到管道事件，取出数据，并修改当前连接fd的epoll事件类型为out,当前线程的epoll循环到这个out事件后，将返回数据写入当前连接的fd中
+
+
+
+//TODO 是否能直接写入fd,不经过epoll out
 
