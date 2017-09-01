@@ -12,3 +12,9 @@ send流程
 
 swoole\_server.send-&gt;swServer\_tcp\_send-&gt;\[factory-&gt;finish\]-&gt;swFactoryProcess\_finish-&gt;swWorker\_send2reactor-&gt;swSocket\_write\_blocking/write pipe
 
+reactor监听事件-&gt;swReactorThread\_onPipeReceive-&gt;swReactorThread\_send-&gt;swConnection\_send/set epoll out
+
+
+
+
+
