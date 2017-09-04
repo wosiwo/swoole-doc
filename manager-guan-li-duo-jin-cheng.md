@@ -1,6 +1,10 @@
 reactor多线程和worker多进程的逻辑
 
-主进程创建manager子进程，manager子进程创建多个worker子进程
+主进程创建manager子进程，manager子进程创建多个worker子进程,每个子进程创建一个自己的reactor线程，用于监听管道事件，
+
+manager进程还负责管理worker子进程的后续销毁与重建
+
+
 
 主进程循环创建 reactor线程，每个线程监听一个管道事件，reactor线程接受到连接后取出数据，写入管道，等待worker进程监听到管道事件
 
