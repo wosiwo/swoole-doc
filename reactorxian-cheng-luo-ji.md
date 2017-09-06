@@ -2,5 +2,5 @@
 
 循环创建reactor线程
 
-主进程接受连接抛给某个reactor线程\(连接fd对reactor\_num取余\)，reactor线程获取完数据后再写入某个worker进程的master管道中
+主进程接受连接抛给某个reactor线程\(连接fd对reactor_num取余\)，reactor线程获取完数据后再写入某个worker进程的pipe_master管道中
 
