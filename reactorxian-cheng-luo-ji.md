@@ -6,3 +6,15 @@
 
 worker进程处理完返回的数据，写入本进程的pipe\_master管道，会被之前监听的reactor线程读取到，然后发送给客户端
 
+
+
+
+
+
+
+reactor线程接受请求时随机转发给worker进程
+
+
+
+reactor线程固定接受某个woker进程的返回数据
+
