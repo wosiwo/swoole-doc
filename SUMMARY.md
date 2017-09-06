@@ -7,4 +7,5 @@
 * [Swoole与php交互](swooleyu-php-jiao-hu.md)
 * [manager 管理多进程](manager-guan-li-duo-jin-cheng.md)
 * [server启动流程](serverqi-dong-liu-cheng.md)
+* [reactor线程逻辑](reactorxian-cheng-luo-ji.md)
 
