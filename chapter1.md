@@ -8,7 +8,7 @@
 
 之后master进程根据配置创建指定个数的Reactor线程，Reactor线程监听对应worker进程的管道，
 
-master进程使用epoll\(linux下\)监听指定端口，当有客户端请求时，获取连接描述符，并交由Reactor线程来监听客户端发送的数据
+master进程使用epoll\(linux下\)监听指定端口，当有客户端请求时，获取连接描述符，并交由Reactor线程来获取客户端发送的数据
 
 Reactor线程接收到数据后，抛给manager进程的Factory模块\(待确认\),Factory会根据一定的分配规则，为该请求分配一个worker进程，并在worker进程执行结束后，将结果返回客户端
 
