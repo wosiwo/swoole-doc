@@ -11,6 +11,13 @@ PHP_METHOD(swoole_server, start)->swServer_start->
 随后在main_reactor中销毁改连接，继续等待下一个连接
 
 本次的连接则由reactor线程接管，接收到数据后抛给worker进程，()
+
+
+
+Swoole暴露给php用于启动的类是swoole_server
+
+其中核心的三个方法是
+    1. PHP_METHOD(swoole_server, set) 用于设置启动参数,e.g worker_num设置worker进程数量
 ```
 
 
