@@ -12,9 +12,9 @@ PHP\_METHOD\(swoole\_server, start\)-&gt;swServer\_start-&gt;
 
 本次的连接则由reactor线程接管，接收到数据后抛给worker进程，\(\)
 
-\#Swoole暴露给php用于启动的类是swoole\_server
+### \#Swoole暴露给php用于启动的类是swoole\_server
 
-其中核心的三个方法是
+###### 其中核心的三个方法是
 
 1. PHP\_METHOD\(swoole\_server, set\) 用于设置启动参数,e.g worker\_num设置worker进程数量
 
@@ -22,11 +22,17 @@ PHP\_METHOD\(swoole\_server, start\)-&gt;swServer\_start-&gt;
 
 3. PHP\_METHOD\(swoole\_server, start\)  启动服务，创建worker进程，绑定端口，创建reactor线程等操作让服务器完成启动
 
-在php执行启动代码
+
+
+### swoole启动流程
+
+1 .配置好启动参数与回调函数后，在php执行启动代码
 
 ```
 $this->sw->start();
 ```
+
+这将会调用扩展中的 PHP\_METHOD\(swoole\_server, start\) 方法
 
 
 
