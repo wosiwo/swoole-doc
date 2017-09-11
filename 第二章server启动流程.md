@@ -52,3 +52,7 @@ int swServer_start(swServer *serv)
 
 之后 swServer\_start 中会调用swServer\_start\_proxy，用于启动reactor线程，以及主进程进入端口监听循环
 
+主进程先创建main\_reactor,实际为创建epoll,并监听端口描述符，并设置连接处理函数swServer\_master\_onAccept，
+
+之后创建多个reactor线程
+
