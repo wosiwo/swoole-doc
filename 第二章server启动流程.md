@@ -26,13 +26,11 @@ PHP\_METHOD\(swoole\_server, start\)-&gt;swServer\_start-&gt;
 
 1 .配置好启动参数与回调函数后，在php执行启动代码
 
-```
+```php
 $this->sw->start();
 ```
 
 这将会调用扩展中的 PHP\_METHOD\(swoole\_server, start\) 方法
-
-
 
 接下来是
 
@@ -41,4 +39,17 @@ int swServer_start(swServer *serv)
 ```
 
 这个方法中会先启动manager进程，然后由manager进程派生多个worker进程
+
+```c
+ //factory start
+    if (factory->start(factory) < 0)
+    {
+        return SW_ERR;
+    }
+ //实际会调用到
+ static int swFactoryProcess_start(swFactory *factory)
+   
+```
+
+
 
