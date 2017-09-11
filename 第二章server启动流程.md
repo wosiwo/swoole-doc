@@ -54,5 +54,7 @@ int swServer_start(swServer *serv)
 
 主进程先创建main\_reactor,实际为创建epoll,并监听端口描述符，并设置连接处理函数swServer\_master\_onAccept，
 
-之后创建多个reactor线程
+之后创建多个reactor线程，在这些线程中简单知道worker进程的管道
+
+
 
