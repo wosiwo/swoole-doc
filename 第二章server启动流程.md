@@ -48,7 +48,6 @@ int swServer_start(swServer *serv)
     }
  //实际会调用到
  static int swFactoryProcess_start(swFactory *factory)
-   
 ```
 
 
