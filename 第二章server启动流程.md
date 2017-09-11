@@ -18,7 +18,8 @@ Swoole暴露给php用于启动的类是swoole_server
 
 其中核心的三个方法是
     1. PHP_METHOD(swoole_server, set) 用于设置启动参数,e.g worker_num设置worker进程数量
-    2. PHP_METHOD(swoole_server, on)
+    2. PHP_METHOD(swoole_server, on) 设置事件的回调函数 最主要的是onReceive事件的回调，其实就是接受到客户端请求swoole所调用的php代码
+    3. PHP_METHOD(swoole_server, start)  启动服务，创建worker进程，绑定端口，创建reactor线程等操作让服务器完成启动
 ```
 
 
