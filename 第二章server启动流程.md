@@ -22,8 +22,6 @@ PHP\_METHOD\(swoole\_server, start\)-&gt;swServer\_start-&gt;
 
 3. PHP\_METHOD\(swoole\_server, start\)  启动服务，创建worker进程，绑定端口，创建reactor线程等操作让服务器完成启动
 
-
-
 ### swoole启动流程
 
 1 .配置好启动参数与回调函数后，在php执行启动代码
@@ -35,4 +33,12 @@ $this->sw->start();
 这将会调用扩展中的 PHP\_METHOD\(swoole\_server, start\) 方法
 
 
+
+接下来是
+
+```c
+int swServer_start(swServer *serv)
+```
+
+这个方法中会先启动manager进程，然后由manager进程派生多个worker进程
 
