@@ -1,18 +1,4 @@
-PHP\_METHOD\(swoole\_server, start\)-&gt;swServer\_start-&gt;
-
-\#swServer\_start函数有两个分支
-
-1. factory-&gt;start-&gt;swFactoryProcess\_start 循环创建worker进程
-
-2 .swServer\_start\_proxy-&gt;swReactorThread\_start-&gt;swReactorThread\_loop 循环创建reactor线程
-
-其中main\_reactor监听端口，有连接进来后讲连接fd绑定到某个reactor线程的epoll循环中
-
-随后在main\_reactor中销毁改连接，继续等待下一个连接
-
-本次的连接则由reactor线程接管，接收到数据后抛给worker进程，\(\)
-
-### \#Swoole暴露给php用于启动的类是swoole\_server
+### Swoole暴露给php用于启动的类是swoole\_server
 
 ###### 其中核心的三个方法是
 
@@ -55,6 +41,4 @@ int swServer_start(swServer *serv)
 主进程先创建main\_reactor,实际为创建epoll,并监听端口描述符，并设置连接处理函数swServer\_master\_onAccept，
 
 之后创建多个reactor线程，在这些线程中简单知道worker进程的管道
-
-
 
