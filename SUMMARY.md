@@ -7,4 +7,5 @@
 * [第四章 reactor线程逻辑](第四章reactor线程逻辑.md)
 * [附1:Swoole与php交互](附1:Swoole与php交互.md)
 * [附2:tinys项目](附2:tinys项目.md)
+* [附3:基础知识](基础知识.md)
 
