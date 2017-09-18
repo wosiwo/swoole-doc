@@ -2,7 +2,9 @@
 
 swoole源码阅读与模拟练习的总结
 
+##整体流程
 
+![image](https://github.com/wosiwo/swoole-doc/static/image/wholeFlow.jpg)
 
 gitbook地址 [https://wosiwo.gitbooks.io/swoole/content/](https://wosiwo.gitbooks.io/swoole/content/)
 
