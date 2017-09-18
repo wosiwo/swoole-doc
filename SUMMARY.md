@@ -6,6 +6,6 @@
 * [第三章 连接调用流程](第三章连接调用流程.md)
 * [第四章 reactor线程逻辑](第四章reactor线程逻辑.md)
 * [附1:Swoole与php交互](./append/F_1Swoole与php交互.md)
-* [附2:tinys项目](./append/F_2tinys项目.md)
+* [附2:tinys项目](append/F_2tinys项目.md)
 * [附3:基础知识](./append/F_3基础知识.md)
 
