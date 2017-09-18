@@ -2,7 +2,7 @@
 
 swoole源码阅读与模拟练习的总结
 
-##整体流程
+## 整体流程
 
 ![image](https://github.com/wosiwo/swoole-doc/blob/master/static/image/wholeFlow.png)
 
