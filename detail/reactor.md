@@ -35,3 +35,13 @@ thread 在[基础知识](../append/F3_基础知识.md)里已经讲解了,线程�
         printf("pthread_create  %d pidt %d \n",i,pidt);
     }
 
+## 其他方法
+
+* pthread_exit 退出线程
+
+* pthread_join 等待线程的结束 类似进程的 wait
+
+* pthread_cancel 取消线程
+
+* pthread_setcancelstate  设置线程取消状态
+
