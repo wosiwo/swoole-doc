@@ -57,5 +57,6 @@ epoll 在[基础知识](../append/F3_基础知识.md)里已经讲解了.代码�
 
 * epoll_wait:等待事件相应,返回响应事件的数量,一般阻塞在循环中,常驻检查事件的情况.当事件返回做相应的程序逻辑.
 
+    ```c
     nfds=epoll_wait(epollfd,local_events,20,500);
-
+    ```
