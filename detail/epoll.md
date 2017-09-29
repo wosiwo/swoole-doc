@@ -28,6 +28,7 @@ epoll 在[基础知识](../append/F3_基础知识.md)里已经讲解了.代码�
 
     * 添加监控描述符:将fd加入监控描述符中
 
+    ```c
     int epollAdd(int epollfd,int fd, int eventType){
         struct epoll_event e;
         setnonblocking(fd);
@@ -39,9 +40,11 @@ epoll 在[基础知识](../append/F3_基础知识.md)里已经讲解了.代码�
         epoll_ctl(epollfd,EPOLL_CTL_ADD,fd,&e);
         return SW_OK;
     }
+    ```
 
     * 修改监控事件类型:
 
+    ```c
     int epollEventSet(int epollfd, int fd, int eventType) {
         struct epoll_event ev;
         memset(&ev, 0, sizeof(ev));
@@ -50,6 +53,7 @@ epoll 在[基础知识](../append/F3_基础知识.md)里已经讲解了.代码�
         int r = epoll_ctl(epollfd, EPOLL_CTL_MOD, fd, &ev);
         return SW_OK;
     }
+    ```
 
 * epoll_wait:等待事件相应,返回响应事件的数量,一般阻塞在循环中,常驻检查事件的情况.当事件返回做相应的程序逻辑.
 
