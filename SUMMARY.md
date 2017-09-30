@@ -8,4 +8,7 @@
 * [附1:Swoole与php交互](append/F1_Swoole与php交互.md)
 * [附2:tinys项目](append/F2_tinys项目.md)
 * [附3:基础知识](append/F3_基础知识.md)
-
+* [详解:Fork详解](detail/fork.md)
+* [详解:Thread详解](detail/reactor.md)
+* [详解:epoll详解](detail/epoll.md)
+* [详解:双工管道详解](detail/pair_socket.md)
